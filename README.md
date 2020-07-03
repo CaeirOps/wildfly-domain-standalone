@@ -2,7 +2,7 @@
 
 ---
 
-## Qual modelo usar?
+## Qual modo usar?
 
 É comum que ao escolhermos a utilização de uma plataforma como o Wildfly para a execução de nossos aplicativos Java, nos deparamos com a seguinte questão: "Qual modo de execução utilizar?", e a resposta é **depende**! O Wildfly possui 2 modos de execução, o domain e o standlone, e todo o seu cenário irá influenciar na escolha que deve ser feita, para ajudar na escolha algumas perguntas podem falicitar a decisão:
 
