@@ -4,14 +4,14 @@
 
 ## Qual modo usar?
 
-É comum que ao escolhermos a utilização de uma plataforma como o Wildfly para a execução de nossos aplicativos Java, nos deparamos com a seguinte questão: "Qual modo de execução utilizar?", e a resposta é **depende**! O Wildfly possui 2 modos de execução, o domain e o standlone, e todo o seu cenário irá influenciar na escolha que deve ser feita, para ajudar na escolha algumas perguntas podem falicitar a decisão:
+É comum que ao escolhermos a utilização de uma plataforma como o Wildfly para a execução de nossos aplicativos Java, nos deparamos com a seguinte questão: "Qual modo de execução utilizar?", e a resposta é **depende**! O Wildfly possui 2 modos de execução, o domain e o standalone, e todo o seu cenário irá influenciar na escolha que deve ser feita, para ajudar na escolha algumas perguntas podem falicitar a decisão:
 
 - Qual a quantidade de instâncias que será necessária?
-- Será preciso um gerencimaneto centralizado e controle de configuração?
+- Será preciso um gerenciamento centralizado e controle de configuração?
 - Será preciso um ponto único e controlável de deployment das aplicações?
 - As instâncias estarão espalhadas por diversas máquinas?
 
-Com certeza respondendo essas perguntas você já terá um boa noção do que precisa, e para isso vamos entender melhor o que diferece cada modo de execução.
+Com certeza respondendo essas perguntas você já terá um boa noção do que precisa, e para isso vamos entender melhor o que difere cada modo de execução.
 
 ## Modo Standalone
 
@@ -34,7 +34,7 @@ Dessa forma vemos que neste modo o gerenciamento, deploy dos aplicativos e manut
 
 Já neste modo é possível ter uma instância centralizadora que terá a função de  "domain controller", e as instâncias que irão receber as instruções que terão a função apenas de "host controller". Com o modo domain temos um ponto único de gerenciamento onde toda configuração realizada no "domain controller" é distribuída para as outras intâncias, evitando assim que uma nova instância seja criada com uma configuração indevida, terá também um ponto único de deploy dos aplicativos e pela configuração realizada o "domain controller" se encarregará de distribuir o artefato somente para as instâncias configuradas para recebê-lo.
 
-Este modo, assim como o standalone também possui os mesmos perfis de execução, porém há uma diferença no nome e este é passado através da configuração e não de arquivos como no modo domain. As opções são:
+Este modo, assim como o standalone também possui os mesmos perfis de execução, porém há uma diferença no nome e este é passado através da configuração e não de arquivos como no modo standalone. As opções são:
 
 Perfil|Nome do Profile|Utilização
 ------|---------------|----------
@@ -47,7 +47,7 @@ Sabemos então que com o modo domain caso tenhamos diversas instâncias ou um am
 
 ## Conclusão
 
-Com base nessas informações, podemos responder as perguntas e chegar uma conclusão que o modo standalone pode ser a melhor escolha para um ambiente tanto de desenvolvimento rápido e ágil como de produção por ter uma configuração e execução mais simples fazendo com que o ambiente seja disponibilizado mais rapidamente, porém se seu cenário requerer diversas intâncias em diversos hosts isto pode se tornar um calcanhar de Aquiles, fazendo com que a gestão seja demasiada trabalhosa e dificultando as tarefas diárias.
+Com base nessas informações, podemos responder as perguntas e chegar a uma conclusão que o modo standalone pode ser a melhor escolha para um ambiente tanto de desenvolvimento rápido e ágil como de produção por ter uma configuração e execução mais simples fazendo com que o ambiente seja disponibilizado mais rapidamente, porém se seu cenário requerer diversas intâncias em diversos hosts isto pode se tornar um calcanhar de Aquiles, fazendo com que a gestão seja demasiada trabalhosa e dificultando as tarefas diárias.
 
 Assim para maior robustez de um ambiente grande e/ou com políticas rigorosas de controle de gestão e acesso, o modo domain seria o mais indicado por provêr toda a gestão concentrada em um único ponto, gerando facilidade, agilidade e rapidez para o administrador destas intâncias gerenciar os serviços e realizar as tarefas diárias.
 
