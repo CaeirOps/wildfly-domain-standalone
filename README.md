@@ -37,6 +37,7 @@ Já neste modo é possível ter uma instância centralizadora que terá a funç�
 Este modo, assim como o standalone também possui os mesmos perfis de execução, porém há uma diferença no nome e este é passado através da configuração e não de arquivos como no modo domain. As opções são:
 
 Perfil|Nome do Profile|Utilização
+------|---------------|----------
 Web|default|Permite o uso do perfil Java EE Web
 Full|full|Permite o uso do perfil Java EE Full
 Web c/ HA|ha|Permite o uso do perfil Java EE Web com características de HA
